@@ -1,16 +1,16 @@
 /* ==========================================================
    North Star Bakery - shared stylesheet for all four pages
-   Colors (4): brown, tan, cream, charcoal - taken from the logo
+   Colors (4): cream, brown, peach, charcoal
    Fonts (2): Lora for headings, Source Sans 3 for body text
    ========================================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap");
 
 :root {
-  --brown: #5c3d2e;     /* logo brown: headings, links, header accents, footer */
-  --tan: #c4a084;       /* logo tan: borders and highlights only (not text) */
-  --cream: #faf6f1;     /* page background, text on brown */
-  --charcoal: #2b211c;  /* body text */
+  --brown: #6b3e26;     /* headings, links, header accents, footer */
+  --peach: #d88c5a;     /* borders and highlights only (not text) */
+  --cream: #fff8f0;     /* page background, text on brown */
+  --charcoal: #2f2a26;  /* body text */
 
   --font-heading: "Lora", Georgia, serif;
   --font-body: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
@@ -52,7 +52,7 @@ h1 {
 h2 {
   font-size: 1.6rem;
   padding-bottom: 0.35rem;
-  border-bottom: 2px solid var(--tan);
+  border-bottom: 2px solid var(--peach);
 }
 
 h3 {
@@ -74,7 +74,7 @@ a {
 }
 
 a:hover {
-  text-decoration-color: var(--tan);
+  text-decoration-color: var(--peach);
 }
 
 /* Visible keyboard focus on every interactive element */
@@ -110,7 +110,7 @@ header {
   max-width: var(--page-width);
   margin: 0 auto;
   padding: 1rem var(--gap);
-  border-bottom: 3px solid var(--tan);
+  border-bottom: 3px solid var(--peach);
 }
 
 header img {
@@ -136,7 +136,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: var(--tan);
+  background-color: var(--peach);
   color: var(--charcoal);
 }
 
@@ -196,7 +196,7 @@ figure img {
 figcaption {
   margin-top: 0.6rem;
   padding-left: 0.75rem;
-  border-left: 3px solid var(--tan);
+  border-left: 3px solid var(--peach);
   font-style: italic;
 }
 
@@ -220,7 +220,7 @@ dd {
 article {
   margin-bottom: 1.25rem;
   padding: 1rem 1.25rem;
-  border-left: 4px solid var(--tan);
+  border-left: 4px solid var(--peach);
   border-radius: 0 8px 8px 0;
 }
 
@@ -237,7 +237,7 @@ form {
 fieldset {
   margin: 0 0 1.5rem;
   padding: 1rem 1.25rem 0.25rem;
-  border: 2px solid var(--tan);
+  border: 2px solid var(--peach);
   border-radius: 8px;
 }
 
@@ -259,7 +259,7 @@ textarea {
   width: 100%;
   margin-top: 0.3rem;
   padding: 0.6rem 0.75rem;
-  border: 2px solid var(--tan);
+  border: 2px solid var(--peach);
   border-radius: 6px;
   background-color: var(--cream);
   color: var(--charcoal);
@@ -305,7 +305,7 @@ th,
 td {
   padding: 0.55rem 0.75rem;
   text-align: left;
-  border-bottom: 1px solid var(--tan);
+  border-bottom: 1px solid var(--peach);
 }
 
 thead th {
