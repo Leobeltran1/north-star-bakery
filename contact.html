@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Send North Star Bakery a pre-order request or question, and find our location and hours.">
+ <title>Contact and Pre-Orders | North Star Bakery</title>
+ <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+ <header>
+   <a href="index.html">
+     <img src="images/bakery-logo_c.png" alt="North Star Bakery logo: a brown loaf of bread with a wheat stalk inside it" width="250" height="213">
+   </a>
+   <nav aria-label="Main navigation">
+     <ul>
+       <li><a href="index.html">Home</a></li>
+       <li><a href="products.html">Products</a></li>
+       <li><a href="about.html">About</a></li>
+       <li><a href="contact.html" aria-current="page">Contact</a></li>
+     </ul>
+   </nav>
+ </header>
+
+ <main>
+   <h1>Contact Us and Pre-Order</h1>
+   <p>
+     Want to reserve a loaf, order a cake, or plan a dessert table for an event? Fill out the form
+     below and we will reply within one business day to confirm your order. Fields marked with an
+     asterisk (*) are required.
+   </p>
+
+   <section aria-labelledby="form-heading">
+     <h2 id="form-heading">Inquiry and Pre-Order Request</h2>
+     <form action="#" method="post">
+       <fieldset>
+         <legend>Your Contact Information</legend>
+
+         <p>
+           <label for="name">Full name *</label><br>
+           <input type="text" id="name" name="name" autocomplete="name" required minlength="2" maxlength="80">
+         </p>
+
+         <p>
+           <label for="email">Email address *</label><br>
+           <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-hint">
+           <br><small id="email-hint">We will send your order confirmation to this address.</small>
+         </p>
+       </fieldset>
+
+       <fieldset>
+         <legend>Request Details</legend>
+
+         <p>
+           <label for="request-type">Request type *</label><br>
+           <select id="request-type" name="request-type" required>
+             <option value="">Choose one</option>
+             <option value="pre-order">Pre-order</option>
+             <option value="custom-cake">Custom cake</option>
+             <option value="event">Event or catering order</option>
+             <option value="question">General question</option>
+           </select>
+         </p>
+
+         <p>
+           <label for="pickup-date">Pickup date *</label><br>
+           <input type="date" id="pickup-date" name="pickup-date" required min="2026-10-01" aria-describedby="date-hint">
+           <br><small id="date-hint">Please allow 48 hours for trays and one week for custom cakes. We are closed Mondays.</small>
+         </p>
+
+         <p>
+           <label for="item-details">Item details *</label><br>
+           <textarea id="item-details" name="item-details" rows="5" cols="40" required minlength="10" maxlength="1000" aria-describedby="item-hint"></textarea>
+           <br><small id="item-hint">List the items, quantities, and any flavors or decorations. For general questions, type your question here.</small>
+         </p>
+
+         <p>
+           <label for="allergy-notes">Allergy notes (if applicable)</label><br>
+           <textarea id="allergy-notes" name="allergy-notes" rows="3" cols="40" maxlength="500" aria-describedby="allergy-hint"></textarea>
+           <br><small id="allergy-hint">Tell us about any food allergies. Our kitchen handles wheat, dairy, eggs, and tree nuts.</small>
+         </p>
+       </fieldset>
+
+       <p>
+         <button type="submit">Send Request</button>
+       </p>
+     </form>
+   </section>
+
+   <section aria-labelledby="location-heading">
+     <h2 id="location-heading">Location</h2>
+     <address>
+       North Star Bakery<br>
+       214 Maple Street<br>
+       Chicago, IL 60601<br>
+       Phone: <a href="tel:+15555555555">(555) 555-5555</a><br>
+       Email: <a href="mailto:hi@northstarbakery.example">hi@northstarbakery.example</a>
+     </address>
+     <p>
+       We are on the corner of Maple Street and 3rd Avenue, one block from the Maple Street bus
+       stop. Free street parking is available after 9:00 a.m.
+     </p>
+   </section>
+
+   <section aria-labelledby="hours-heading">
+     <h2 id="hours-heading">Hours of Operation</h2>
+     <table>
+       <caption>Weekly store hours</caption>
+       <thead>
+         <tr>
+           <th scope="col">Day</th>
+           <th scope="col">Hours</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr><th scope="row">Monday</th><td>Closed</td></tr>
+         <tr><th scope="row">Tuesday</th><td>6:30 a.m. to 6:00 p.m.</td></tr>
+         <tr><th scope="row">Wednesday</th><td>6:30 a.m. to 6:00 p.m.</td></tr>
+         <tr><th scope="row">Thursday</th><td>6:30 a.m. to 6:00 p.m.</td></tr>
+         <tr><th scope="row">Friday</th><td>6:30 a.m. to 6:00 p.m.</td></tr>
+         <tr><th scope="row">Saturday</th><td>7:00 a.m. to 3:00 p.m.</td></tr>
+         <tr><th scope="row">Sunday</th><td>7:00 a.m. to 3:00 p.m.</td></tr>
+       </tbody>
+     </table>
+   </section>
+ </main>
+
+ <footer>
+   <p>&copy; 2026 North Star Bakery. A homegrown bakery.</p>
+   <p>214 Maple Street, Chicago, IL 60601 | <a href="tel:+15555555555">(555) 555-5555</a></p>
+ </footer>
+</body>
+</html>

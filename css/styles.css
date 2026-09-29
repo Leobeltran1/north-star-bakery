@@ -1,0 +1,356 @@
+/* ==========================================================
+   North Star Bakery - shared stylesheet for all four pages
+   Colors (4): brown, tan, cream, charcoal - taken from the logo
+   Fonts (2): Lora for headings, Source Sans 3 for body text
+   ========================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap");
+
+:root {
+  --brown: #5c3d2e;     /* logo brown: headings, links, header accents, footer */
+  --tan: #c4a084;       /* logo tan: borders and highlights only (not text) */
+  --cream: #faf6f1;     /* page background, text on brown */
+  --charcoal: #2b211c;  /* body text */
+
+  --font-heading: "Lora", Georgia, serif;
+  --font-body: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+
+  --page-width: 60rem;
+  --gap: 1.5rem;
+}
+
+/* ---------- Base ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cream);
+  color: var(--charcoal);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  color: var(--brown);
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--tan);
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p,
+ul,
+dl,
+address {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--brown);
+  font-weight: 600;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-color: var(--tan);
+}
+
+/* Visible keyboard focus on every interactive element */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--brown);
+  outline-offset: 3px;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+address {
+  font-style: normal;
+}
+
+/* ---------- Header and navigation ---------- */
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 1rem var(--gap);
+  border-bottom: 3px solid var(--tan);
+}
+
+header img {
+  width: 130px;
+  border-radius: 0;
+  mix-blend-mode: multiply; /* blends the logo's white box into the cream page */
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: var(--tan);
+  color: var(--charcoal);
+}
+
+/* The current page is shown as a filled brown pill */
+nav a[aria-current="page"] {
+  background-color: var(--brown);
+  color: var(--cream);
+}
+
+/* ---------- Main content ---------- */
+
+main {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 2rem var(--gap) 3rem;
+}
+
+main > p {
+  max-width: 45rem;
+}
+
+section {
+  margin-top: 2.5rem;
+}
+
+section p,
+section li {
+  max-width: 45rem;
+}
+
+main ul {
+  padding-left: 1.25rem;
+}
+
+main li {
+  margin-bottom: 0.4rem;
+}
+
+section > img,
+picture,
+figure,
+video {
+  margin: 1.25rem 0;
+}
+
+/* Signature Loaf figure */
+figure {
+  max-width: 500px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+figure img {
+  margin: 0;
+}
+
+figcaption {
+  margin-top: 0.6rem;
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--tan);
+  font-style: italic;
+}
+
+/* Product lists: name on one line, description below */
+dl {
+  max-width: 45rem;
+}
+
+dt {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--brown);
+  margin-top: 1rem;
+}
+
+dd {
+  margin: 0.2rem 0 0;
+}
+
+/* Staff cards */
+article {
+  margin-bottom: 1.25rem;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--tan);
+  border-radius: 0 8px 8px 0;
+}
+
+article p {
+  margin-bottom: 0;
+}
+
+/* ---------- Contact form ---------- */
+
+form {
+  max-width: 36rem;
+}
+
+fieldset {
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.25rem 0.25rem;
+  border: 2px solid var(--tan);
+  border-radius: 8px;
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--brown);
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.6rem 0.75rem;
+  border: 2px solid var(--tan);
+  border-radius: 6px;
+  background-color: var(--cream);
+  color: var(--charcoal);
+  font: inherit;
+}
+
+small {
+  display: inline-block;
+  margin-top: 0.3rem;
+  font-size: 0.95rem;
+}
+
+button {
+  padding: 0.75rem 1.75rem;
+  border: none;
+  border-radius: 999px;
+  background-color: var(--brown);
+  color: var(--cream);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--charcoal);
+}
+
+/* ---------- Hours table ---------- */
+
+table {
+  width: 100%;
+  max-width: 28rem;
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+th,
+td {
+  padding: 0.55rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--tan);
+}
+
+thead th {
+  background-color: var(--brown);
+  color: var(--cream);
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  padding: 1.5rem var(--gap);
+  background-color: var(--brown);
+  color: var(--cream);
+  text-align: center;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+footer a {
+  color: var(--cream);
+}
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 600px) {
+  body {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+}
