@@ -330,6 +330,208 @@ footer a {
   color: var(--cream);
 }
 
+/* ---------- Pre-order list (Products page) ---------- */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.preorder-panel {
+  max-width: 45rem;
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  border: 2px solid var(--peach);
+  border-radius: 8px;
+}
+
+.preorder-items {
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.preorder-items li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--peach);
+}
+
+.preorder-name {
+  font-weight: 600;
+}
+
+.preorder-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.preorder-quantity {
+  min-width: 2ch;
+  text-align: center;
+  font-weight: 600;
+}
+
+.preorder-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+
+/* Buttons added by JavaScript: shared base */
+.add-button,
+.quantity-button,
+.text-button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.add-button {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.35rem 1rem;
+  border: 2px solid var(--brown);
+  border-radius: 999px;
+  background-color: transparent;
+  color: var(--brown);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.add-button:hover {
+  background-color: var(--brown);
+  color: var(--cream);
+}
+
+.quantity-button {
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 2px solid var(--brown);
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--brown);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.quantity-button:hover {
+  background-color: var(--brown);
+  color: var(--cream);
+}
+
+.text-button {
+  padding: 0.25rem;
+  border: none;
+  background: none;
+  color: var(--brown);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.text-button:hover {
+  background: none;
+  text-decoration-color: var(--peach);
+}
+
+.button-link {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  background-color: var(--brown);
+  color: var(--cream);
+  text-decoration: none;
+}
+
+.button-link:hover {
+  background-color: var(--charcoal);
+}
+
+/* Summary bar pinned to the bottom of the screen once the list has items */
+.preorder-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 1.25rem;
+  margin: 0;
+  padding: 0.75rem var(--gap);
+  background-color: var(--charcoal);
+  color: var(--cream);
+  text-align: center;
+}
+
+.preorder-bar a {
+  color: var(--cream);
+}
+
+.preorder-bar[hidden] {
+  display: none;
+}
+
+/* Keeps the footer from hiding behind the bar */
+body.has-preorder-bar {
+  padding-bottom: 4.5rem;
+}
+
+/* ---------- Form messages (Contact page) ---------- */
+
+.field-error {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--brown);
+  font-weight: 600;
+}
+
+.field-error:empty {
+  display: none;
+}
+
+/* The warning sign means the error is not shown by color alone */
+.field-error::before {
+  content: "\26A0\FE0E  ";
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: var(--brown);
+  border-width: 3px;
+}
+
+.form-note {
+  max-width: 36rem;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--peach);
+}
+
+.form-success {
+  max-width: 36rem;
+  padding: 1.25rem 1.5rem;
+  border: 2px solid var(--peach);
+  border-radius: 8px;
+}
+
+.form-success p {
+  margin-bottom: 0;
+}
+
 /* ---------- Small screens ---------- */
 
 @media (max-width: 600px) {
